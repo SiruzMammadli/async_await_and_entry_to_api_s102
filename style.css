@@ -51,5 +51,40 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
+
+    > .single_post {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      > .title {
+        line-height: 1.2;
+      }
+
+      > .posted_at {
+        color: #6c757d;
+        line-height: 1.2;
+      }
+
+      > .categories {
+        > span {
+          background-color: #6C757D;
+          color: white;
+          font-size: 14px;
+          font-weight: 500;
+          border-radius: 6px;
+          padding: 2px 6px;
+        }
+      }
+
+      > .post_image {
+        border-radius: 8px;
+        overflow: hidden;
+
+        > img {
+          vertical-align: middle;
+        }
+      }
+    }
   }
 }

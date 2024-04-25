@@ -98,6 +98,10 @@ function createPostElement(data, time) {
   const post = document.createElement("div");
   post.classList.add("post");
 
+  const params = new URLSearchParams({
+    id: data.id
+  });
+
   post.innerHTML = `
     <div class="post_img">
         <img src=${data.image} alt="">
@@ -108,7 +112,7 @@ function createPostElement(data, time) {
         <p class="description">
             ${data.description}
         </p>
-        <a href="#" class="read_more">Read more -></a>
+        <a href=${`/single.html?${params}`} class="read_more">Read more -></a>
     </div>
     `;
   return post;
